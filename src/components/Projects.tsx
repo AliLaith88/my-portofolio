@@ -1,6 +1,6 @@
 import { ExternalLink, Github } from "lucide-react";
 import floraProject from "../assets/flora.png";
-import mehatProject from "../assets/mehat.png";
+import mehatProject from "../assets/mehat.jpg";
 import pharmacyProject from "../assets/pharmacy.png";
 const projects = [
   {
@@ -18,7 +18,8 @@ const projects = [
     technologies: ["React", "Material-UI", "Tailwind"],
     liveUrl:
       "https://john-doe-landing-page-git-ali88-alilaith88s-projects.vercel.app/",
-    githubUrl: "https://github.com/AliLaith88/JohnDoeLandingPage/tree/ali88",
+    githubUrl:
+      "https://john-doe-landing-page-466d1fuzq-alilaith88s-projects.vercel.app",
   },
   {
     title: "Pharmacy Landing Page",
