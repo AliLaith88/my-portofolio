@@ -7,7 +7,7 @@ const projects = [
     title: "Travel Agency",
     description: "",
     image: floraProject,
-    technologies: ["React", "Tailwind css"],
+    technologies: ["React", "Tailwind css", "Figma"],
     liveUrl: "https://flora-one-delta.vercel.app/",
     githubUrl: "https://github.com/AliLaith88/Flora",
   },
@@ -15,7 +15,7 @@ const projects = [
     title: "Landing Page",
     description: "",
     image: mehatProject,
-    technologies: ["React", "Material-UI", "Tailwind"],
+    technologies: ["React", "Tailwind", "Figma"],
     liveUrl:
       "https://john-doe-landing-page-git-ali88-alilaith88s-projects.vercel.app/",
     githubUrl:
