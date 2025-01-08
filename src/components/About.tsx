@@ -6,15 +6,8 @@ export default function About() {
       <div className="section-container">
         <h2 className="section-title">About Me</h2>
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="flex justify-center">
-            <img
-              src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800"
-              alt="Working on laptop"
-              className="rounded-lg shadow-lg max-w-96"
-            />
-          </div>
           <div>
-            <p className="text-lg text-gray-600 mb-16">
+            <p className="text-lg text-gray-600 mb-16 text-center md:text-left">
               I am a Computer Science graduate with experience in web
               development and design. I focus on creating responsive websites
               with clean code and effective layouts, emphasizing usability and
@@ -40,6 +33,13 @@ export default function About() {
                 </p>
               </div>
             </div>
+          </div>
+          <div className="justify-center hidden md:flex">
+            <img
+              src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800"
+              alt="Working on laptop"
+              className="rounded-lg shadow-lg max-w-96 w-2/4 md:w-full"
+            />
           </div>
         </div>
       </div>

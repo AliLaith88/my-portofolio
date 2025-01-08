@@ -23,18 +23,20 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all ${
-        isScrolled ? "bg-white shadow-md" : "bg-transparent"
+      className={`sticky top-0 w-full z-50 transition-colors duration-300 ${
+        isScrolled
+          ? "bg-white shadow-md"
+          : "bg-gradient-to-br from-blue-50 to-indigo-50"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex items-center">
-            <a href="#" className="text-xl font-bold text-gray-900">
-              （*＾-＾*）
-            </a>
-          </div>
+        <div className="flex justify-between h-16 items-center">
+          {/* Logo */}
+          <a href="#" className="text-xl font-bold text-gray-900">
+            (*^_^*)
+          </a>
 
+          {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <a
@@ -47,32 +49,32 @@ export default function Navigation() {
             ))}
           </div>
 
-          <div className="md:hidden flex items-center">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-600 hover:text-gray-900"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden text-gray-600 hover:text-gray-900"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-white shadow-lg">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
+        <div
+          className="absolute top-16 left-0 w-full bg-white shadow-lg z-50"
+          style={{ maxHeight: "calc(100vh - 64px)", overflowY: "auto" }}
+        >
+          {navItems.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              className="block px-4 py-2 text-gray-600 hover:text-blue-600 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {item.label}
+            </a>
+          ))}
         </div>
       )}
     </nav>
